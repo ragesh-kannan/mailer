@@ -17,7 +17,7 @@ npm install nodemailer
 npm install express
 npm install body-parser
 
-after installing the above modules, execute the below command with _port (for example - 3000, you can use any port you want)_,
+after installing the above modules, execute the below command with port (for example - 3000, you can use any port you want),
 
 node mailer.js 3000
 
