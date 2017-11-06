@@ -13,18 +13,18 @@ Please follw the steps to use the mailer module and this module need some of the
 
 inside mailer folder, run the below code,
 
-**npm install nodemailer**
-**npm install express**
-**npm install body-parser**
+npm install nodemailer
+npm install express
+npm install body-parser
 
 after installing the above modules, execute the below command with _port (for example - 3000, you can use any port you want)_,
 
-**node mailer.js 3000**
+node mailer.js 3000
 
 after executing the above command, you the access the mail sending api in 
-**http://localhost:port/sendmail/**
+http://localhost:port/sendmail/
 
-**json parameter to be post for the above api is**
+json parameter to be post for the above api is
 {
   "host": "{{smtp server}}",
   "port": "{{smtp port}}",
@@ -37,4 +37,4 @@ after executing the above command, you the access the mail sending api in
   "html": "{{html content}}"
 }
 
-**Thank you**
+Thank you
