@@ -17,7 +17,7 @@ node mailer.js 3000
 
 after executing the above command, you the access the mail sending api in 
 http://localhost:port/sendmail/
-
+```
 json parameter to be post for the above api is
 {
   "host": "{{smtp server}}",
@@ -30,5 +30,5 @@ json parameter to be post for the above api is
   "subject": "{{subject}}",
   "html": "{{html content}}"
 }
-
+```
 Thank you
