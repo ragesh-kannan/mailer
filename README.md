@@ -1,37 +1,40 @@
 ## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/ragesh-kannan/mailer/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+This module helps you to send mail from anywhere
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Mailer
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Please follw the steps to use the mailer module and this module need some of the npm dependencies shown below. Please install them as it is.
 
 ```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+1.) git clone https://github.com/ragesh-kannan/mailer.git
+2.) cd mailer
 
-- Bulleted
-- List
+inside mailer folder, run the below code,
 
-1. Numbered
-2. List
+**npm install nodemailer**
+**npm install express**
+**npm install body-parser**
 
-**Bold** and _Italic_ and `Code` text
+after installing the above modules, execute the below command with _port (for example - 3000, you can use any port you want)_,
 
-[Link](url) and ![Image](src)
-```
+**node mailer.js 3000**
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+after executing the above command, you the access the mail sending api in 
+**http://localhost:port/sendmail/**
 
-### Jekyll Themes
+**json parameter to be post for the above api is**
+{
+  "host": "{{smtp server}}",
+  "port": "{{smtp port}}",
+  "ssl": "{{true or false}}",
+  "user": "{{smtp username}}",
+  "pass": "{{smtp password}}",
+  "from": "{{from mail address}}",
+  "to": "{{to mail address}}",
+  "subject": "{{subject}}",
+  "html": "{{html content}}"
+}
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ragesh-kannan/mailer/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+**Thank you**
