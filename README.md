@@ -16,7 +16,7 @@ Now execute the below command with port (for example - 3000, you can use any por
 node mailer.js 3000
 
 after executing the above command, you the access the mail sending api in 
-http://localhost:port/sendmail/
+http://localhost:3000/sendmail/
 ```
 json parameter to be post for the above api is
 {
