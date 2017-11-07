@@ -18,33 +18,36 @@ app.post('/sendmail', function (req, res) {
     to = req.to,
     subject = req.subject,
     html = req.html;
+    
+    try {
+        let transporter = nodemailer.createTransport({
+            host: host,
+            port: port,
+            secure: ssl,
+            auth: {
+                user: user,
+                pass: pass
+            }
+        });
 
-    let transporter = nodemailer.createTransport({
-        host: host,
-        port: port,
-        secure: ssl,
-        auth: {
-            user: user,
-            pass: pass
-        }
-    });
+        let mailOptions = {
+            from: from,
+            to: to,
+            subject: subject,
+            html: html
+        };
 
-    let mailOptions = {
-        from: from,
-        to: to,
-        subject: subject,
-        html: html
-    };
-
-    transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-            res.send(false);
-        } else {
-            transporter.close();
-            res.send(true);
-        }
-    });
-    res.send(u);
+        transporter.sendMail(mailOptions, (error, info) => {
+            if (error) {
+                res.send(false);
+            } else {
+                transporter.close();
+                res.send(true);
+            }
+        });
+    } catch (error) {
+        res.send(error.message);
+    }
 });
 
 app.listen(port);
