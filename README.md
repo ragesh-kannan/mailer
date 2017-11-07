@@ -1,8 +1,7 @@
-Google Compute Engine does not allow outbound connections on ports 25, 465, and 587. Although standard email ports are blocked, you can choose a non-standard port to send email through or can also take advantage of the mail services offered by Compute Engine partners.  If you need to send mail through a corporate mail server but are blocked by the port restrictions described at the top of this page, you can use a VPN to bypass these restrictions.  If above all options are not available you can use this module which provides api access for mail sending to your SMTP service from within GCE like restricted environment. You may have to host this in an environment that don't have the port restrictions, thus working around the port restrictions, though you still may have to implement your own api end-point access restriction on top of this.
-
 ### node-mailer wrapper
 
-Please follow the steps to use the mailer module to send mail from anywhere and this module need some of the npm dependencies shown below. Lets install them as it is.
+Google Compute Engine does not allow outbound connections on ports 25, 465, and 587. Although standard email ports are blocked, you can choose a non-standard port to send email through or can also take advantage of the mail services offered by Compute Engine partners.  If you need to send mail through a corporate mail server but are blocked by the port restrictions described at the top of this page, you can use a VPN to bypass these restrictions.  If above all options are not available you can use this module which provides api access for mail sending to your SMTP service from within GCE like restricted environment. You may have to host this in an environment that don't have the port restrictions, thus working around the port restrictions, though you still may have to implement your own api end-point access restriction on top of this.
+
 ```
 1.) git clone https://github.com/ragesh-kannan/mailer.git
 2.) cd mailer
