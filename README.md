@@ -8,17 +8,15 @@ Google Compute Engine does not allow outbound connections on ports 25, 465, and 
 ```
 Inside mailer folder, install the dependency modules shown below,
 ```
-npm install nodemailer
 npm install express
-npm install body-parser
 ```
-Now execute the below command with port (for example - 3000, you can use any port you want),
+for nodemailer - Now execute the below command with port (for example - 3000, you can use any port you want),
 ```
-node mailer.js 3000
+node mailer.js 3000 "nodemailer"
 ```
 after executing the above command, you the access the mail sending api in 
 ```
-http://localhost:3000/sendmail/
+http://localhost:3000/
 ```
 
 json parameter to be post for the above api is
@@ -35,4 +33,41 @@ json parameter to be post for the above api is
   "html": "{{html content}}"
 }
 ```
+for mailgun - Now execute the below command with port (for example - 3000, you can use any port you want),
+```
+node mailer.js 3000 "mailgun" {{apikey}} {{domainname}}
+```
+after executing the above command, you the access the mail sending api in 
+```
+http://localhost:3000/
+```
+
+json parameter to be post for the above api is
+```
+{
+  "from": "{{from mail address}}",
+  "to": "{{to mail address}}",
+  "subject": "{{subject}}",
+  "html": "{{html content}}"
+}
+```
+for sendgrid - Now execute the below command with port (for example - 3000, you can use any port you want),
+```
+node mailer.js 3000 "sendgrid" {{apikey}}
+```
+after executing the above command, you the access the mail sending api in 
+```
+http://localhost:3000/
+```
+
+json parameter to be post for the above api is
+```
+{
+  "from": "{{from mail address}}",
+  "to": "{{to mail address}}",
+  "subject": "{{subject}}",
+  "html": "{{html content}}"
+}
+```
+
 Thank you
