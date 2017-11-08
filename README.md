@@ -10,7 +10,7 @@ Inside mailer folder, install the dependency modules shown below,
 ```
 npm install express
 ```
-for nodemailer - Now execute the below command with port (for example - 3000, you can use any port you want),
+### for nodemailer - Now execute the below command with port (for example - 3000, you can use any port you want),
 ```
 node mailer.js 3000 "nodemailer"
 ```
@@ -33,7 +33,7 @@ json parameter to be post for the above api is
   "html": "{{html content}}"
 }
 ```
-for mailgun - Now execute the below command with port (for example - 3000, you can use any port you want),
+### for mailgun - Now execute the below command with port (for example - 3000, you can use any port you want),
 ```
 node mailer.js 3000 "mailgun" {{apikey}} {{domainname}}
 ```
@@ -51,7 +51,7 @@ json parameter to be post for the above api is
   "html": "{{html content}}"
 }
 ```
-for sendgrid - Now execute the below command with port (for example - 3000, you can use any port you want),
+### for sendgrid - Now execute the below command with port (for example - 3000, you can use any port you want),
 ```
 node mailer.js 3000 "sendgrid" {{apikey}}
 ```
