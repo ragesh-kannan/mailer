@@ -10,13 +10,13 @@ Inside mailer folder, install the dependency modules shown below,
 ```
 npm install express
 ```
-### for nodemailer - Now execute the below command with port (for example - 3000, you can use any port you want),
+### for nodemailer - Now execute the below command with host and port (for example - serveraddress:port, you can use any port you want),
 ```
-node mailer.js 3000 "nodemailer"
+node mailer.js serveraddress:port "nodemailer"
 ```
 after executing the above command, you the access the mail sending api in 
 ```
-http://localhost:3000/
+http://serveraddress:port/
 ```
 
 json parameter to be post for the above api is
@@ -33,13 +33,13 @@ json parameter to be post for the above api is
   "html": "{{html content}}"
 }
 ```
-### for mailgun - Now execute the below command with port (for example - 3000, you can use any port you want),
+### for mailgun - Now execute the below command with host and port (for example - serveraddress:port, you can use any port you want),
 ```
-node mailer.js 3000 "mailgun" {{apikey}} {{domainname}}
+node mailer.js serveraddress:port "mailgun" {{apikey}} {{domainname}}
 ```
 after executing the above command, you the access the mail sending api in 
 ```
-http://localhost:3000/
+http://serveraddress:port/
 ```
 
 json parameter to be post for the above api is
@@ -51,13 +51,13 @@ json parameter to be post for the above api is
   "html": "{{html content}}"
 }
 ```
-### for sendgrid - Now execute the below command with port (for example - 3000, you can use any port you want),
+### for sendgrid - Now execute the below command with host and port (for example - serveraddress:port, you can use any port you want),
 ```
-node mailer.js 3000 "sendgrid" {{apikey}}
+node mailer.js serveraddress:port "sendgrid" {{apikey}}
 ```
 after executing the above command, you the access the mail sending api in 
 ```
-http://localhost:3000/
+http://serveraddress:port/
 ```
 
 json parameter to be post for the above api is
