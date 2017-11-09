@@ -1,8 +1,11 @@
 const express = require('express');
 const app = express();
-const port = process.argv[2];
 
 try {
+    const runon = (process.argv[2]).split(':');
+    const host = runon[0];
+    const port = runon[1];
+    
     if (process.argv[3] == 'mailgun') 
     {
         const api_key = process.argv[4];
@@ -96,7 +99,7 @@ try {
             res.send(error.message);
         }
     });
-    app.listen(port);
+    app.listen(port, host);
     console.log('app listening to ', port);
 } catch (error) {
     console.log(error.message);
