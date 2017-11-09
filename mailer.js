@@ -94,6 +94,7 @@ try {
                     html: html
                 };
                 sgMail.send(msg);
+                res.send(true);
             }
         } catch (error) {
             res.send(error.message);
